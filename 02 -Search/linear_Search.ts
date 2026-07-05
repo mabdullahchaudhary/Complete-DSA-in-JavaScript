@@ -13,16 +13,20 @@ linear algoritm be like as your input goes through each element of the array one
 
 
 export default function linear_search(arr: number[], target: number): boolean {
+
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === target){
-            console.log("The target value index is "+ i);
-            return true; 
+        if (target === arr[i]) {
+            console.log("we have found a number at " + i);
+
+            return true;
         }
     }
+
     return false;
+
 }
 
 let numbers: number[] = [3, 2, 5, 7, 4, 8, 3, 8, 2, 9, 5, 3, 6];
-let target = 15;
+let target = 5;
 let value = linear_search(numbers, target);
 console.log(value);
